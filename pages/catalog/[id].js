@@ -10,7 +10,7 @@ import ProductsSect from "../../sections/CatalogsPage/Products";
 import ProdStyles from "../../styles/forPages/ProductPage/Product.module.scss"
 // !data fetching
 export const getStaticPaths = async () => {
-  const fetchData = await fetch(`https://fakestoreapi.com/products/category/women's%20clothing`)
+  const fetchData = await fetch(`https://fakestoreapi.com/products`)
     .then((response) => response.json())
     .then((data) => data);
   const paths = fetchData.map((id) => (
@@ -27,8 +27,8 @@ export const getStaticPaths = async () => {
   }
 }
 export const getStaticProps = async ({ params }) => {
-  const prodId = `${params.id}`;
-  const res = await fetch(`https://fakestoreapi.com/products/${prodId}`)
+  // const prodId = `${params.id}`;
+  const res = await fetch(`https://fakestoreapi.com/products/${params.id}`)
     .then((response) => response.json())
     .then((data) => data);
   return {
@@ -92,7 +92,10 @@ const Product = ({ res }) => {
                   </div>
                   <div className={ProdStyles.buttons}>
                     <button className={ProdStyles.toCart}>В КОРЗИНУ</button>
-                    <button className={ProdStyles.toFav}> <i className="ri ri-heart-line"></i> В ИЗБРАННОЕ</button>
+                    <button className={ProdStyles.toFav}>
+                      <i className="ri ri-heart-line"></i>
+                      В ИЗБРАННОЕ
+                    </button>
                   </div>
                   <div className="description">
                     <h5>Подробности</h5>
