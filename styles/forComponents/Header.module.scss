@@ -1,0 +1,171 @@
+@use "../scndGlobals";
+$HeaderBg: rgba(143, 123, 107, 0.55);
+
+
+section.innerHeader {
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    @include scndGlobals.flexbox($j-c: space-between);
+    min-height: 80px;
+    background-color: $HeaderBg ;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+
+    a.menu {
+        color: scndGlobals.$wht;
+        font-size: 25px;
+        width: 100px;
+        z-index: 999;
+
+        @media (max-width:992px) {
+            width: 40px;
+        }
+
+        @media (min-width:768px) {
+            visibility: hidden;
+        }
+    }
+
+    ul.navg {
+        @include scndGlobals.flexbox();
+        gap: 25px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        li {
+            a {
+                @include scndGlobals.defText($clr: scndGlobals.$wht);
+
+                &:hover {
+                    @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                }
+            }
+        }
+
+    }
+
+    .dropHidden {
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        button {
+            background: none;
+            border: none;
+            border-radius: 0;
+            @include scndGlobals.defText($clr: scndGlobals.$wht);
+
+            &:hover {
+                @include scndGlobals.defText($clr: scndGlobals.$primClr);
+            }
+
+        }
+
+        ul {
+            background: $HeaderBg;
+            border: none;
+            border-radius: 0;
+
+            li {
+                max-width: 50px;
+                cursor: pointer;
+
+                a {
+                    @include scndGlobals.defText($clr: scndGlobals.$wht);
+                    background: none;
+
+                    &:hover {
+                        @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    a.brand {
+        @include scndGlobals.defText($clr: scndGlobals.$wht);
+
+        // @media (max-width: 768px) {
+        //     display: none;
+        // }
+    }
+
+    .dropdowns {
+        @include scndGlobals.flexbox();
+        gap: 25px;
+
+
+
+        .drop {
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+
+            button {
+                background: none;
+                border: none;
+                @include scndGlobals.defText($clr: scndGlobals.$wht);
+
+                &:hover {
+                    @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                }
+
+            }
+
+            ul {
+                background: $HeaderBg;
+                border: none;
+                border-radius: 0;
+
+                li {
+                    max-width: 50px;
+                    cursor: pointer;
+
+                    a {
+                        @include scndGlobals.defText($clr: scndGlobals.$wht);
+                        background: none;
+
+                        &:hover {
+                            @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .icons {
+        @include scndGlobals.flexbox();
+        gap: 32px;
+
+        a {
+            font-size: 25px;
+            @include scndGlobals.defText($clr: scndGlobals.$wht);
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                @include scndGlobals.defText($clr: scndGlobals.$primClr);
+            }
+
+        }
+    }
+}
+
+section.changedBg {
+    color: scndGlobals.$blck;
+}

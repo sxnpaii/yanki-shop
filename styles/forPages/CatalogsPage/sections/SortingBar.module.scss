@@ -1,0 +1,26 @@
+@use "../../../scndGlobals";
+
+section.innerSortingBar {
+    ul {
+        @include scndGlobals.flexbox();
+        gap: 35px;
+
+        li {
+            @include scndGlobals.flexbox();
+            gap: 10px;
+            @include scndGlobals.defText();
+
+            &:last-child {
+                select {
+                    border: none;
+                    background: transparent;
+                    opacity: .7;
+
+                    option {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

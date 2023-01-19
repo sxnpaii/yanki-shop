@@ -1,0 +1,110 @@
+@use "../../scndGlobals";
+
+section.singleProduct {
+    section.ProductProps {
+        @include scndGlobals.flexbox($a-i: flex-start);
+        gap: 50px;
+
+        @media (min-width:768px) {
+            flex-wrap: nowrap;
+        }
+
+        img.image {
+            width: 100%;
+            max-width: 540px;
+
+            @media (max-width:1200px) {
+                width: 55%;
+            }
+
+            @media (max-width:768px) {
+                width: 90%;
+            }
+        }
+
+        .text {
+            width: 100%;
+            max-width: 530px;
+
+            h5 {
+                @include scndGlobals.defText();
+                margin-bottom: 20px;
+
+            }
+
+            b {
+                display: block;
+                @include scndGlobals.defText($f-w: 700);
+                margin-bottom: 25px;
+            }
+
+
+            .dropdown {
+                .btn {
+                    @include scndGlobals.defText();
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    margin-bottom: 20px;
+                    border: 0.5px solid #252525;
+                    background: transparent;
+                }
+
+                .dropMenu {
+                    width: 100%;
+                    border-radius: 0%;
+                    background: scndGlobals.$BgClr;
+                }
+            }
+
+            .buttons {
+                width: 100%;
+                margin-bottom: 20px;
+                @include scndGlobals.flexbox();
+                gap: 20px;
+
+
+
+                .toCart,
+                .toFav {
+                    width: 255px;
+                    height: 50px;
+                    @include scndGlobals.btnProp();
+
+                    @media (max-width:1400px) {
+                        width: 100%;
+                    }
+
+                    @media (max-width:768px) {
+                        width: 48%;
+                    }
+
+                    @media (max-width:576px) {
+                        width: 47%;
+                    }
+
+                    @media (max-width:356px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .accordion {
+                .accorBtn {
+                    background: scndGlobals.$BgClr;
+                    @include scndGlobals.defText();
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                .accorBody {
+                    @include scndGlobals.defText();
+                    background: scndGlobals.$BgClr;
+                    border-bottom: 1px solid scndGlobals.$blck;
+                }
+            }
+        }
+    }
+}

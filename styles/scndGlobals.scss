@@ -1,0 +1,34 @@
+$Raleway: 'Raleway', sans-serif;
+$BgClr: #E5E5E5;
+$primClr: #E0BEA2;
+$scndClr: #6F83A4;
+$textClr: #252525;
+$wht: #fff;
+$blck: #000;
+
+@mixin defText($f-w: 300, $clr: $textClr) {
+    font-family: $Raleway;
+    font-weight: $f-w;
+    color: $clr;
+}
+
+@mixin flexbox($a-i: center, $j-c: center) {
+    display: flex;
+    align-items: $a-i;
+    justify-content: $j-c ;
+    flex-wrap: wrap;
+}
+
+@mixin btnProp {
+
+    border: none;
+    background: transparent;
+    border: 0.5px solid $blck;
+    @include defText();
+
+    &:hover {
+        border: none;
+        background: $primClr;
+        color: $wht;
+    }
+}

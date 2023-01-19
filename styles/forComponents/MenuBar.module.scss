@@ -1,0 +1,145 @@
+@use "../scndGlobals";
+
+.MenuBar {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    // height: 100vh;
+    background: scndGlobals.$BgClr;
+    z-index: 9999;
+    padding: 15px 15px;
+    @include scndGlobals.flexbox($a-i: space-between, $j-c: flex-start);
+    flex-direction: column;
+
+    div.Brand {
+        @include scndGlobals.flexbox($j-c: space-between);
+        height: 65px;
+        @include scndGlobals.defText();
+
+        i,
+        a {
+            @include scndGlobals.defText($clr: scndGlobals.$blck);
+        }
+
+    }
+
+    .flexed {
+        @include scndGlobals.flexbox($j-c: space-between);
+        width: 100%;
+
+
+        .input {
+            width: 75%;
+            height: 40px;
+            @include scndGlobals.flexbox($j-c: space-between);
+            flex-wrap: nowrap;
+            border: 0.3px solid #252525;
+            border-radius: 20px;
+
+            input {
+                display: inline-block;
+                width: 95%;
+                height: 40px;
+                border: none;
+                border-radius: 20px;
+                background: transparent;
+                padding: 0 20px;
+
+
+            }
+
+            i {
+                font-size: 20px;
+                display: block;
+                margin-right: 20px;
+                color: scndGlobals.$blck;
+            }
+        }
+
+        .Drop {
+            width: 10%;
+            margin: auto;
+            @include scndGlobals.defText();
+
+            button {
+                background: none;
+                border: none;
+                @include scndGlobals.defText($clr: scndGlobals.$textClr);
+
+                &:hover {
+                    @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                }
+
+            }
+
+            ul {
+                background: scndGlobals.$BgClr;
+                border: none;
+                min-width: auto;
+
+                li {
+                    cursor: pointer;
+
+                    a {
+                        @include scndGlobals.defText($clr: scndGlobals.$textClr);
+                        background: none;
+
+                        &:hover {
+                            @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    ul.Navg {
+        margin-top: 20px;
+        margin-bottom: 80px;
+
+        li {
+            @include scndGlobals.flexbox();
+            height: 60px;
+            border-top: 0.3px solid #252525;
+
+            &:last-child {
+                border-bottom: 0.3px solid #252525;
+
+            }
+
+
+            a {
+
+                @include scndGlobals.defText();
+
+                &:hover {
+                    color: scndGlobals.$primClr;
+                }
+            }
+        }
+    }
+
+    .info {
+        width: 330px;
+        margin: auto;
+        text-align: center;
+
+        .icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+
+            a i {
+                color: scndGlobals.$primClr;
+                font-size: 30px;
+            }
+
+        }
+
+        p {
+            @include scndGlobals.defText();
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "../../../scndGlobals";
+
+
+section.innerPushNotifs {
+    background: scndGlobals.$BgClr;
+    @include scndGlobals.flexbox();
+    flex-direction: column;
+    padding: 50px 0 100px 0;
+
+    * {
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text {
+
+        h2.heading {
+            @include scndGlobals.defText();
+            margin-bottom: 50px;
+        }
+
+        input {
+            height: 50px;
+            @include scndGlobals.defText();
+            border: 1px solid scndGlobals.$blck;
+            margin-bottom: 20px;
+            background: scndGlobals.$BgClr;
+        }
+
+        button {
+            @include scndGlobals.defText($clr: scndGlobals.$wht);
+            background: scndGlobals.$primClr;
+            border: none;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            @include scndGlobals.defText();
+        }
+    }
+
+}

@@ -1,0 +1,53 @@
+@use '../../../scndGlobals';
+
+section.innerHero {
+    background: url('../../../../img/Фон.png') no-repeat fixed center center / cover;
+    min-height: 100vh;
+
+    @media (max-width:576px) {
+        width: 100%;
+        // min-height: 85vh;
+        background: url('../../../../img/Фон 2.png') no-repeat fixed center center / cover;
+    }
+
+    @include scndGlobals.flexbox();
+
+    .text {
+        max-width: 375px;
+        text-align: center;
+        @include scndGlobals.flexbox();
+        flex-direction: column;
+       
+        
+
+
+        h2.heading {
+            @include scndGlobals.defText($clr: scndGlobals.$wht);
+        }
+
+        .hrLine {
+            width: 120px;
+            margin: 20px 0;
+            border: .5px solid scndGlobals.$wht;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            @include scndGlobals.defText($clr: scndGlobals.$wht);
+
+            &:hover {
+
+                i {
+                    transform: translateX(5px);
+                }
+
+            }
+
+            i {
+                width: 16px;
+                height: 24px;
+            }
+        }
+    }
+}

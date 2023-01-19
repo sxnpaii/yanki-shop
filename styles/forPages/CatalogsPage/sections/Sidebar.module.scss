@@ -1,0 +1,70 @@
+@use "../../../scndGlobals";
+
+section.innerSidebar {
+    width: 100%;
+
+    @media (min-width: 576px) {
+        width: 200px;
+
+    }
+
+    @media (max-width:576px) {
+        max-width: 700px;
+    }
+
+    .visibleOnlyMobile {
+        width: 100%;
+        width: 350px;
+        @include scndGlobals.flexbox();
+
+        @media (min-width:576px) {
+            display: none;
+        }
+
+        ul.dropdownMenu {
+            width: 100%;
+            transition: none !important;
+            background: scndGlobals.$BgClr;
+            border-radius: 0;
+        }
+
+        button.btn {
+            display: block;
+            width: 100%;
+            background: scndGlobals.$primClr;
+            @include scndGlobals.defText($clr: scndGlobals.$wht);
+            border-radius: 0;
+            border: none;
+            margin-bottom: 30px;
+        }
+    }
+
+    details.visibleOnlyDesktop {
+        @media (max-width:576px) {
+            display: none;
+        }
+
+        summary {
+            h4 {
+                @include scndGlobals.defText();
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+
+    ul {
+        li {
+            margin-bottom: 20px;
+
+            a {
+                @include scndGlobals.defText();
+
+                &:hover {
+                    color: scndGlobals.$primClr;
+                }
+
+            }
+        }
+    }
+}
