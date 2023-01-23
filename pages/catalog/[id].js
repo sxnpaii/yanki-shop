@@ -19,11 +19,10 @@ export const getStaticPaths = async () => {
         id: toString(id)
       }
     }
-  )
-  )
+  ))
   return {
     paths,
-    fallback: "blocking"
+    fallback: "blocking",
   }
 }
 export const getStaticProps = async ({ params }) => {
@@ -31,7 +30,7 @@ export const getStaticProps = async ({ params }) => {
   const res = await fetch(`https://fakestoreapi.com/products/${params.id}`)
     .then((response) => response.json())
     .then((data) => data);
-  return {
+  return { 
     props: {
       res: res
     }

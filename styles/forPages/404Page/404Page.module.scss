@@ -1,0 +1,35 @@
+@use "../../scndGlobals";
+
+main.main {
+
+    section.ErrorSection {
+        height: 100vh;
+        @include scndGlobals.flexbox();
+
+        .text {
+            text-align: center;
+
+            h2.mainText {
+                @include scndGlobals.defText();
+                margin-bottom: 20px;
+            }
+
+            p {
+                @include scndGlobals.defText($clr: scndGlobals.$primClr);
+                margin-bottom: 40px;
+
+            }
+
+            a.btn {
+                @include scndGlobals.flexbox();
+                @include scndGlobals.btnProp();
+                margin: auto;
+                width: 230px;
+                height: 50px;
+                text-transform: capitalize;
+            }
+        }
+
+
+    }
+}

@@ -8,7 +8,7 @@ section.innerFooter {
         @include scndGlobals.flexbox($a-i: flex-start, $j-c: space-between);
         gap: 40px;
         max-width: 1160px;
-        margin: auto auto 75px auto;
+        margin: auto auto 55px auto;
 
         @media(max-width:780px) {
             width: 75%;

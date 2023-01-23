@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import FooterStyles from '../styles/forComponents/FooterStyles.module.scss';
 
 const Footer = () => {
@@ -7,7 +9,7 @@ const Footer = () => {
                 <ul>
                     <h5>КОМПАНИЯ</h5>
                     <li><a href="">О нас</a></li>
-                    <li><a href="">Контакты</a></li>
+                    <li><Link href="/contacts">Контакты</Link></li>
                 </ul>
                 <ul>
                     <h5>ПОЛЕЗНОЕ</h5>
@@ -35,5 +37,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
-  
+export default Footer;

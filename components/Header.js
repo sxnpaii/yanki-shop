@@ -2,11 +2,11 @@ import HeaderStyles from "../styles/forComponents/Header.module.scss";
 import Link from "next/link";
 
 const Header = () => {
-   
+
     return (
         <section className={HeaderStyles.innerHeader} >
 
-            <Link href="/MenuBar"   className={HeaderStyles.menu}
+            <Link href="/MenuBar" className={HeaderStyles.menu}
             >
                 <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="34" height="4" fill="white" />
@@ -16,9 +16,9 @@ const Header = () => {
             </Link>
             <ul className={HeaderStyles.navg}>
                 <li>
-                    <a href="">
+                    <Link href="/catalog">
                         NEW
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <Link href="/catalog">
@@ -63,18 +63,18 @@ const Header = () => {
                 </div>
             </div>
             <div className={HeaderStyles.icons}>
-                <a href="">
+                <Link href="">
                     <i className="ri-search-line"></i>
-                </a>
-                <a href="">
+                </Link>
+                <Link href="">
                     <i className="ri-user-line"></i>
-                </a>
-                <a href="">
+                </Link>
+                <Link href="/favorites">
                     <i className="ri-heart-line"></i>
-                </a>
-                <a href="">
+                </Link>
+                <Link href="Cart">
                     <i class="ri-shopping-cart-2-line"></i>
-                </a>
+                </Link>
             </div>
         </section>
     )
