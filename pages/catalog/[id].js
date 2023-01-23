@@ -7,7 +7,9 @@ import Pagination from "../../components/Pagination";
 import Footer from "../../components/Footer";
 // sections
 import ProductsSect from "../../sections/CatalogsPage/Products";
-import ProdStyles from "../../styles/forPages/ProductPage/Product.module.scss"
+import ProdStyles from "../../styles/forPages/ProductPage/Product.module.scss";
+
+
 // !data fetching
 export const getStaticPaths = async () => {
   const fetchData = await fetch(`https://fakestoreapi.com/products`)
@@ -16,7 +18,7 @@ export const getStaticPaths = async () => {
   const paths = fetchData.map((id) => (
     {
       params: {
-        id: toString(id)
+        id: String(id)
       }
     }
   ))
@@ -36,7 +38,9 @@ export const getStaticProps = async ({ params }) => {
     }
   }
 }
-// ?User interface UI
+
+
+// ? UI
 const Product = ({ res }) => {
   return (
     <main>

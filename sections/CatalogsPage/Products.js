@@ -13,7 +13,9 @@ const ProductsSect = ({ Products }) => {
                                 <div key={id} className={ProductCardStyles.innerCard}>
                                     <div className={ProductCardStyles.img} >
                                         <Link href={`/catalog/${id}`} >
+                                            
                                             <img src={image} alt="products" width={310} height={360} />
+                                            {/* {console.log(typeof id)} */}
                                         </Link>
                                         <a href="" className={ProductCardStyles.heart}>
                                             <i className="ri ri-heart-line"></i>
