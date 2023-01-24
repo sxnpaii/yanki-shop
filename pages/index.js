@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Create Next App</title>
+        <title>Yanki Clothes Shop</title>
         <meta name="description" content="Generated with create next app by SXNPAII " />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/YANKI.svg" />
       </Head>
       <main className={HomePageStyles.App}
       >
