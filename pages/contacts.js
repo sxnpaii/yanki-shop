@@ -4,7 +4,8 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Pagination from "../components/Pagination"
 // sections
-import PushNotifs from "../sections/HomePage/PushNotifs"
+import PushNotifs from "../sections/HomePage/PushNotifs";
+import Contacts from "../sections/ContactPage/Contacts"
 import ContactsStyles from "../styles/forPages/ContactsPage/Contacts.module.scss"
 
 export default function contacts() {
@@ -32,7 +33,7 @@ export default function contacts() {
             <section>
                 <div className="container">
                     <div className="row">
-
+                        <Contacts />
                     </div>
                 </div>
             </section>

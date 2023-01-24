@@ -1,1 +1,31 @@
 @use "../../scndGlobals";
+
+section.Contacts {
+    margin-bottom: 100px;
+
+    h5 {
+        @include scndGlobals.defText();
+        margin-bottom: 30px;
+    }
+
+    .contacts {
+        @include scndGlobals.flexbox($j-c: space-between, $a-i: flex-start);
+
+        ul {
+            h6 {
+                @include scndGlobals.defText();
+                margin-bottom: 20px;
+            }
+
+            li {
+                margin-bottom: 20px;
+                @include scndGlobals.defText();
+
+                i {
+                    font-size: 36px;
+                    color: scndGlobals.$primClr;
+                }
+            }
+        }
+    }
+}
