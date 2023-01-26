@@ -1,9 +1,13 @@
+import Head from "next/head";
 // styles
 import ContactsStyles from "../../styles/forPages/ContactsPage/Contacts.module.scss";
 
 const Contacts = () => {
     return (
         <section className={ContactsStyles.Contacts}>
+            <Head>
+                <title>Contacts</title>
+            </Head>
             <h5 className="h4">Связаться с нами</h5>
             <div className={ContactsStyles.contacts}>
                 <ul className={ContactsStyles.list}>
