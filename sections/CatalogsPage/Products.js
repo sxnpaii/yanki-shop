@@ -1,7 +1,8 @@
-import ProductCardStyles from "../../styles/forPages/CatalogsPage/sections/Products.module.scss";
-
 import Image from "next/image";
 import Link from "next/link";
+// styles
+import ProductCardStyles from "../../styles/forPages/CatalogsPage/sections/Products.module.scss";
+
 const ProductsSect = ({ Products }) => {
     return (
         <section className="Products">
@@ -13,7 +14,7 @@ const ProductsSect = ({ Products }) => {
                                 <div key={id} className={ProductCardStyles.innerCard}>
                                     <div className={ProductCardStyles.img} >
                                         <Link href={`/catalog/${id}`} >
-                                            
+
                                             <img src={image} alt="products" width={310} height={360} />
                                             {/* {console.log(typeof id)} */}
                                         </Link>
@@ -32,7 +33,7 @@ const ProductsSect = ({ Products }) => {
                                             <span>L</span>
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                             ))
                         }
                     </div>

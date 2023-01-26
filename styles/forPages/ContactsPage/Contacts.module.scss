@@ -10,10 +10,27 @@ section.Contacts {
 
     .contacts {
         @include scndGlobals.flexbox($j-c: space-between, $a-i: flex-start);
+        gap: 30px;
+        margin: auto;
 
-        ul {
+        @media (max-width:1200px) {
+            width: 75%;
+        }
+
+        @media (max-width:768px) {
+            width: 100%;
+            justify-content: center;
+        }
+
+        ul.list {
+            max-width: 215px;
+
+            @media (max-width:1200px) {
+                @include scndGlobals.flexbox();
+            }
+
             h6 {
-                @include scndGlobals.defText();
+                @include scndGlobals.defText($f-w: 500);
                 margin-bottom: 20px;
             }
 
